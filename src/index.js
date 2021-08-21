@@ -1,3 +1,4 @@
+import "./scripts/config"
 import { ChatUI, LinksUI, UserUI } from "./scripts/ui";
 import Chatroom from "./scripts/chat";
 import Auth from "./scripts/auth";
@@ -22,7 +23,6 @@ const chatUI = new ChatUI(chatList);
 const linksUI = new LinksUI(buttons, menu);
 const chatroom = new Chatroom("general", localStorage.username);
 const userUI = new UserUI(userContent);
-
 
 // user changes
 auth.onAuthStateChanged((_user) => {

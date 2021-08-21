@@ -1,7 +1,13 @@
 const path = require("path");
 const svgToMiniDataURI = require('mini-svg-data-uri');
+const webpack = require('webpack')
 
 module.exports = {
+  plugins:[
+    new webpack.ProvidePlugin({
+      process: 'process/browser'
+  })
+  ],
   entry: ["regenerator-runtime/runtime.js", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist/assets"),
