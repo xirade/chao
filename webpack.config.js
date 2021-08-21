@@ -1,12 +1,13 @@
 const path = require("path");
 const svgToMiniDataURI = require('mini-svg-data-uri');
-const webpack = require('webpack')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   plugins:[
-    new webpack.ProvidePlugin({
-      process: 'process/browser'
-  })
+    new Dotenv({
+      path: './.env',
+      safe: true
+    })
   ],
   entry: ["regenerator-runtime/runtime.js", "./src/index.js"],
   output: {

@@ -1,5 +1,5 @@
-const API_KEY = process.env.FIREBASE_API_KEY;
-const APP_ID = process.env.FIREBASE_APP_ID;
+const API_KEY = process.env.API_KEY;
+const APP_ID = process.env.APP_ID;
 
 const script = document.createElement("script");
 // initial firebase
