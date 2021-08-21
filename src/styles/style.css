@@ -1,0 +1,37 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.chat-window {
+  list-style: none;
+}
+
+.message {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.message::-webkit-scrollbar {
+  width: 0.5em;
+}
+.message::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(90, 228, 203, 0.3);
+}
+
+.message::-webkit-scrollbar-thumb {
+  background-color: #5ae4ca;
+  outline: 1px solid #54c9b3;
+}
+
+.dropdown button {
+  border-radius: 1.5em;
+}
+
+/* fix icon inside button from bubbling up  */
+button > *, a > * {
+  pointer-events: none;
+}
+
+.media-content {
+  overflow: visible;
+}

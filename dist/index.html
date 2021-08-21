@@ -1,0 +1,350 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ChaO</title>
+  </head>
+  <body>
+    <div class="container is-max-desktop my-5 p-5">
+      <!-- NAVBAR -->
+      <nav class="has-background-light p-2">
+        <div
+          class="is-flex is-justify-content-space-between is-align-items-center"
+        >
+          <div class="nav-start">
+            <h1 class="is-size-3 has-text-weight-bold navbar-item">ChaO</h1>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <!-- DROPDOWN -->
+              <div class="dropdown is-right">
+                <div class="dropdown-trigger">
+                  <button
+                    class="button is-medium"
+                    aria-haspopup="true"
+                    aria-controls="dropdown-menu6"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-user" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu6" role="menu">
+                  <div class="btns has-text-centered dropdown-content">
+                    <a
+                      class="logged-out px-0 is-hidden dropdown-item"
+                      data-target="modal-login"
+                    >
+                      <strong>Login</strong>
+                    </a>
+                    <a
+                      class="logged-in px-0 is-hidden dropdown-item"
+                      data-target="modal-details"
+                    >
+                      <strong>User details</strong>
+                    </a>
+                    <a class="logged-in px-0 is-hidden dropdown-item">
+                      <strong>Logout</strong>
+                    </a>
+                    <a
+                      class="
+                        logged-out
+                        is-hidden
+                        px-0
+                        has-text-weight-semibold
+                        dropdown-item
+                      "
+                      data-target="modal-signup"
+                      >Sign up</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- DROPDOWN -->
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- SIGN UP MODAL -->
+      <div id="modal-signup" class="modal is-clipped">
+        <div class="modal-background"></div>
+        <div>
+          <div class="modal-card m-0">
+            <header class="modal-card-head has-background-primary">
+              <p
+                class="
+                  modal-card-title
+                  has-text-centered
+                  is-capitalized
+                  has-text-weight-bold
+                "
+              >
+                Sign up
+              </p>
+            </header>
+            <form id="signup-form">
+              <div class="modal-card-body">
+                <div class="field">
+                  <p class="control has-icons-left has-icons-right">
+                    <input
+                      class="input is-medium"
+                      type="text"
+                      name="signup-name"
+                      placeholder="Username"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control has-icons-left has-icons-right">
+                    <input
+                      class="input is-medium"
+                      type="email"
+                      name="signup-email"
+                      placeholder="Email"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control has-icons-left">
+                    <input
+                      class="input is-medium"
+                      type="password"
+                      name="signup-password"
+                      placeholder="Password"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  </p>
+                </div>
+                <div
+                  class="
+                    is-flex
+                    is-justify-content-space-between
+                    is-align-items-center
+                  "
+                >
+                  <p>
+                    If you already have an account, just
+                    <a class="link-in" data-target="modal-login">login</a>.
+                  </p>
+                  <button type="submit" class="button is-primary ml-3">
+                    Sign up
+                  </button>
+                </div>
+                <p class="error my-2 has-text-danger has-text-centered"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- SIGN UP MODAL -->
+
+      <!-- LOGIN MODAL -->
+      <div id="modal-login" class="modal is-clipped">
+        <div class="modal-background"></div>
+        <div>
+          <div class="modal-card m-0">
+            <header class="modal-card-head has-background-primary">
+              <p
+                class="
+                  modal-card-title
+                  has-text-centered
+                  is-capitalized
+                  has-text-weight-bold
+                "
+              >
+                Login
+              </p>
+            </header>
+            <form id="login-form">
+              <div class="modal-card-body">
+                <div class="field">
+                  <p class="control has-icons-left has-icons-right">
+                    <input
+                      class="input is-medium"
+                      name="login-email"
+                      type="email"
+                      placeholder="Email"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control has-icons-left">
+                    <input
+                      class="input is-medium"
+                      name="login-password"
+                      type="password"
+                      placeholder="Password"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  </p>
+                </div>
+                <div
+                  class="
+                    is-flex
+                    is-justify-content-space-between
+                    is-align-items-center
+                  "
+                >
+                  <p>
+                    Don't have account yet?
+                    <a class="link-in" data-target="modal-signup">sign up</a>.
+                  </p>
+                  <button type="submit" class="button is-primary ml-3">
+                    Login
+                  </button>
+                </div>
+                <p class="error my-2 has-text-danger has-text-centered"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- LOGIN MODAL -->
+
+      <!-- USER DETAILS MODAL -->
+      <div id="modal-details" class="modal is-clipped">
+        <div class="modal-background"></div>
+        <div>
+          <div class="modal-card m-0">
+            <header class="modal-card-head has-background-primary">
+              <p
+                class="
+                  modal-card-title
+                  has-text-centered
+                  is-capitalized
+                  has-text-weight-bold
+                "
+              >
+                User details
+              </p>
+            </header>
+            <!-- ADMIN ACTIONS -->
+            <section class="modal-card-body">
+              <div class="user card-content">
+                <!-- USER CONTENT -->
+              </div>
+              <form class="admin is-hidden" id="admin-actions">
+                <div class="field is-grouped">
+                  <p class="control is-expanded has-icons-left">
+                    <input
+                      class="input"
+                      name="admin-email"
+                      type="email"
+                      placeholder="User email"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </p>
+                  <p class="control">
+                    <input
+                      class="button input is-success"
+                      type="submit"
+                      value="Make admin"
+                    />
+                  </p>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- USER DETAILS MODAL -->
+
+      <!-- CHAT-->
+      <div class="py-5 has-text-centered">
+        <h2 class="is-size-5">Choose a chatroom:</h2>
+        <div class="my-2">
+          <div class="chat-rooms buttons is-justify-content-center my-2">
+            <button class="button is-primary" id="general">#general</button>
+            <button class="button is-primary" id="gaming">#gaming</button>
+            <button class="button is-primary" id="music">#music</button>
+            <button class="button is-primary" id="imbas">#imbas</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="message">
+        <ul class="chat-list box message-body"></ul>
+      </div>
+
+      <form class="new-chat my-3">
+        <div class="field is-grouped">
+          <div class="control is-expanded">
+            <input class="input" id="message" type="text" />
+          </div>
+          <p class="control">
+            <input class="button input is-success" type="submit" value="Send" />
+          </p>
+        </div>
+      </form>
+      <!-- CHAT -->
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.9.0/date_fns.min.js"
+      integrity="sha512-ToehgZGJmTS39fU8sfP9/f0h2Zo6OeXXKgpdEgzqUtPfE5By1K/ZkD8Jtp5PlfdaWfGVx+Jw5j10h63wSwM1HA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-functions.js"></script>
+    <script>
+      // initial firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyBqtdd6bHWU1Pfriia1LM5RnEGq11T6qjA",
+        authDomain: "modern-jvs.firebaseapp.com",
+        projectId: "modern-jvs",
+        storageBucket: "modern-jvs.appspot.com",
+        messagingSenderId: "682144169136",
+        appId: "1:682144169136:web:40346e03f37dd5b72bcf75",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      // make auth and firestore refs
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+    </script>
+    <script src="assets/bundle.js"></script>
+  </body>
+</html>
