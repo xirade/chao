@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "functions": "cd functions/index && npm install",
+    "functions": "cd functions && npm install",
     "build": "node_modules/.bin/webpack --mode production",
     "serve": "webpack serve --mode development"
   },
